@@ -1,0 +1,157 @@
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.input{
+  display: none;
+}
+.container{
+  width: 100%;
+  text-align: center;
+}
+h1{
+  font-weight: normal;
+  font-size: 35px;
+  position: relative;
+  margin: 40px 0;
+}
+h1::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #DC143C;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: animate 4s linear infinite;
+}
+@keyframes animate {
+  0%{
+    width: 100px;
+  }
+  50%{
+    width: 200px;
+  }
+  100%{
+    width: 100px;
+  }
+}
+.topContent{
+  background-color: rgb(243, 243, 243);
+  width: 90%;
+  margin: 0 auto 20px auto;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 3px 3px 5px #888;
+}
+h3{
+height: 100%;
+background-color: rgb(221, 221, 221);
+line-height: 60px;
+padding: 0 50px;
+color: #fff;
+}
+label{
+  display: inline-block;
+  height: 100%;
+  margin: 0 20px;
+  line-height: 60px;
+  font-size: 18px;
+  color: #888;
+  cursor: pointer;
+  transition: .5s;
+}
+label:hover{
+  color: #000;
+}
+.photoGallery{
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+.pic{
+ position: relative;
+ height: 230px;
+ border-radius: 10px;
+ box-shadow: 3px 3px 5px rgb(221, 221, 221);
+}
+.pic img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: .5s;
+}
+.pic img:hover{
+  opacity: 0.8;
+}
+
+.pic .over{
+  position: absolute;
+  top:10px;
+  left: 20px;
+  font-size: 1.2em;
+  opacity: 0;
+  cursor: pointer;
+}
+.pic:hover i{
+  opacity: 0.9;
+  transition: .2s;
+}
+
+
+
+
+
+
+
+#check1:checked ~ .container .photoGallery .pic{
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
+  transition: .3s;
+}
+#check2:checked ~ .container .photoGallery .sky{
+  opacity: 1;
+  transform: scale(1);
+  position:relative;
+  transition: .3s;
+}
+#check2:checked ~ .container .photoGallery .desert,
+#check2:checked ~ .container .photoGallery .ocean{
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+}
+
+#check3:checked ~ .container .photoGallery .desert{
+  opacity: 1;
+  transform: scale(1);
+  position:relative;
+  transition: .3s;
+}
+#check3:checked ~ .container .photoGallery .sky,
+#check3:checked ~ .container .photoGallery .ocean{
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+}
+#check4:checked ~ .container .photoGallery .ocean{
+  opacity: 1;
+  transform: scale(1);
+  position:relative;
+  transition: .3s;
+}
+#check4:checked ~ .container .photoGallery .sky,
+#check4:checked ~ .container .photoGallery .desert{
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+}
