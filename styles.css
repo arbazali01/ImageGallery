@@ -94,8 +94,15 @@ label:hover{
   border-radius: 10px;
   transition: .5s;
 }
-
-.pic .over{
+.pic .over1{
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  font-size: 2.2em;
+  opacity: 0;
+  cursor: pointer;
+}
+.pic .over2{
   position: absolute;
   bottom: 15px;
   right: 20px;
