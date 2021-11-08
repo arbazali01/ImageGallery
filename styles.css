@@ -59,6 +59,9 @@ line-height: 60px;
 padding: 0 50px;
 color: #fff;
 }
+.container .photoGallery .pic a{
+  color: #000;
+}
 label{
   display: inline-block;
   height: 100%;
